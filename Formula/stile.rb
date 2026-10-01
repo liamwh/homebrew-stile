@@ -4,6 +4,12 @@ class Stile < Formula
   version "0.1.0"
   license "Apache-2.0"
 
+  # Linux only: the broker boundary is Unix sockets with SO_PEERCRED,
+  # runuser and a privileged systemd service. There is no macOS port and
+  # no launchd integration; this formula is a developer convenience that
+  # installs binaries, NOT a stile deployment.
+  depends_on :linux
+
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/liamwh/stile/releases/download/v0.1.0/stile-v0.1.0-x86_64-unknown-linux-musl.tar.gz"

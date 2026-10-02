@@ -1,7 +1,7 @@
 class Stile < Formula
   desc "Capability-oriented secret broker: lifecycle operations for untrusted callers"
   homepage "https://github.com/liamwh/stile"
-  version "0.1.0"
+  version "0.1.1"
   license "Apache-2.0"
 
   # Linux only: the broker boundary is Unix sockets with SO_PEERCRED,
@@ -12,12 +12,12 @@ class Stile < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/liamwh/stile/releases/download/v0.1.0/stile-v0.1.0-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "527fc1b7a7db334a38465c15290031d26acbb90a4806832e1182dcdeaf64a156"
+      url "https://github.com/liamwh/stile/releases/download/v0.1.1/stile-v0.1.1-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "ef907c8e8f0e15016eb95b4a3b06cc4695937d989c128be09735975a33c4bcbb"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/liamwh/stile/releases/download/v0.1.0/stile-v0.1.0-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "942030119a418cb7b54c9b3258c30705bcef98c84ef3d3aa8f073f7d2c6a69c9"
+      url "https://github.com/liamwh/stile/releases/download/v0.1.1/stile-v0.1.1-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "42793f266b0a8d414a6dcd38bbc7438fbd178de19d4a0b93aa2fa0ccdc0b1fb9"
     end
   end
 
